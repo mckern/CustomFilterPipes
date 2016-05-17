@@ -1,0 +1,68 @@
+[
+    {
+        "caption": "Text: Unwrap lines",
+        "command": "filter_pipes_regex",
+        "args": {
+            "regex": "\n",
+            "replacement": " "
+        }
+    },
+    {
+        "caption": "Text: Swap Quotes",
+        "command": "filter_pipes_translate",
+        "args": {
+            "before": "'\"",
+            "after": "\"'"
+        }
+    },
+    {
+        "caption": "Text: Convert to Straight Quotes",
+        "command": "filter_pipes_translate",
+        "args": {
+            "before": "\u201c\u201d\u201f\u301d\u301e\uff02\u201e\u301f\u2018\u2019\u201b\uff07\u201a",
+            "after": "\"\"\"\"\"\"\"\"'''''"
+        }
+    },
+    {
+        "caption": "Text: Collapse Spaces",
+        "command": "filter_pipes_regex",
+        "args": {
+            "regex": "\\s+",
+            "replacement": " "
+        }
+    },
+    {
+        "caption": "Text: Unwrap lines",
+        "command": "filter_pipes_regex",
+        "args": {
+            "regex": "\n|\r",
+            "replacement": " "
+        }
+    },
+    {
+        "caption": "Sort Lines (Numeric)",
+        "command": "filter_pipes_process",
+        "args": {
+            "command": ["sort", "-n"]
+        }
+    },
+    {
+        "caption": "Sort Lines (Unique)",
+        "command": "filter_pipes_process",
+        "args": {
+            "command": ["sort", "-u"]
+        }
+    },
+    {
+        "caption": "Text: Reverse Words",
+        "command": "reverse_words"
+    },
+    {
+        "caption": "Shrug",
+        "command": "filter_pipes_process",
+        "args": {
+            "command": ["echo", "¯\\_(ツ)_/¯"]
+        }
+    },
+
+]
